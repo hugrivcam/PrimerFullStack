@@ -1,0 +1,55 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Registro de empleados</h3>
+  <form (ngSubmit)="onSubmit()" [formGroup]="empleadoForm">
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <div style=" display:flex;align-items: center;">
+        <input type="text"
+          required
+          minlength="4"
+          maxlength="40"
+          class="form-control" 
+          id="nombre"
+          formControlName="nombre"
+          placeholder="Introduzca Nombre"
+          (blur)="comprobarNombre()"
+        />
+        <img *ngIf="nombreValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
+        <img *ngIf="nombreValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />
+      </div>
+      <label for="apellido">Apellido</label>
+      <div style=" display:flex;align-items: center;">
+        <input type="text"
+          required
+          class="form-control" 
+          id="apellido"
+          formControlName="apellido"
+          minlength="4"
+          maxlength="40"
+          placeholder="Introduzca apellidos"
+          (blur)="comprobarApellido()"
+        />
+        <img *ngIf="apellidoValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
+        <img *ngIf="apellidoValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />        
+      </div>
+      <label for="email">E-mail</label>
+      <div style=" display:flex;align-items: center;">
+        <input type="text"
+          required
+          class="form-control" 
+          id="email"
+          formControlName="email"
+          placeholder="nombre@correoVálido.xxx"
+          pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+          (blur)="comprobarEmail()"
+        />
+        <img *ngIf="emailValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
+        <img *ngIf="emailValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />
+      </div>
+    </div>
+    <!-- <button data-mdb-ripple-color="aqua" class="btn btn-success mt-2">Guardar</button> -->
+    <button *ngIf="empleadoForm.valid" type="submit" data-mdb-ripple-color="aqua" class="btn btn-success mt-2">Guardar</button>
+    <button *ngIf="!empleadoForm.valid" type="submit" data-mdb-ripple-color="aqua" class="btn btn-outline-dark mt-2">Guardar</button>
+  </form>
+  <!-- <button class="btn btn-danger" (click)="irAlaRutaDeEmpleados()">ir a lista</button> -->
+</div>

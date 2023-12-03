@@ -1,0 +1,36 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* .table-container {
+  flex: 1;
+  overflow:auto;
+  height: 80%;
+}
+
+.button-container {
+  flex-shrink: 0; 
+  margin-top: 10px; /* Ajusta según sea necesario 
+  height: 20%;
+} */
+
+.table-container {
+  flex: 0.94; /* Esto significa que la tabla ocupará el 80% de la altura del contenedor. */
+  overflow: auto;
+}
+
+.button-container {
+  flex: 0.06; /* Esto significa que el contenedor del botón ocupará el 20% de la altura del contenedor. */
+  display: flex;
+  justify-content:flex-end; /* Alinea el botón al extremo derecho del contenedor. */
+  align-items:top; /* Alinea el botón en la parte inferior del contenedor. */
+  margin-top: 10px;
+  /* padding: 10px; */
+}
