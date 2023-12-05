@@ -17,6 +17,7 @@ export class RegistrarEmpleadoComponent implements OnInit {
   apellidoValido:number=-1;
   emailValido:number = -1;
 
+
   //reactive form
   public empleadoForm = new FormGroup(
     {
@@ -24,6 +25,7 @@ export class RegistrarEmpleadoComponent implements OnInit {
       apellido: new FormControl(<string>(''),{nonNullable:true}),
       email: new FormControl(<string>(''),{nonNullable:true})
     })
+    
   constructor(private sev:ServiceEmpleadoService, private router:Router) {}
 
   ngOnInit(): void {

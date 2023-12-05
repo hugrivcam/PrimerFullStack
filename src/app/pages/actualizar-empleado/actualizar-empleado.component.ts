@@ -90,6 +90,7 @@ export class ActualizarEmpleadoComponent {
       console.log("Formulario no valido");
     }
   }
+
   comprobarNombre(){ //blur al salir del cuadro comprueba 
     const res = this.empleadoForm.get('nombre')!.valid;
     if (this.empleadoForm.get('nombre')!.value.length > 0)
@@ -98,6 +99,7 @@ export class ActualizarEmpleadoComponent {
     else
       this.nombreValido = -1;  
   }
+  
   comprobarApellido(){ //blur al salir del cuadro comprueba 
     const control = this.empleadoForm.get('apellido'); 
     const res = control!.valid;
