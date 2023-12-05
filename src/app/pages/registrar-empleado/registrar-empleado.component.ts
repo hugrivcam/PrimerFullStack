@@ -10,8 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./registrar-empleado.component.css']
 })
 export class RegistrarEmpleadoComponent implements OnInit {
-  RUTA_VALID:string = "/assets/icons/Valid.png";
-  RUTA_CANCEL:string = "/assets/icons/cancel.png";
+  RUTA_VALID:string = "./assets/icons/Valid.png";
+  RUTA_CANCEL:string = "./assets/icons/cancel.png";
   em:Empleado = new Empleado();//es una clase
   nombreValido:number = -1;
   apellidoValido:number=-1;

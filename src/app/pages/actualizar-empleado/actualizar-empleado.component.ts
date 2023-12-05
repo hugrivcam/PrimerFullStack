@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 })
 export class ActualizarEmpleadoComponent {
   //RUTA_VALID:string = "../../../assets/icons/Valid.png";
-  RUTA_VALID:string = "/assets/icons/Valid.png";
-  RUTA_CANCEL:string = "/assets/icons/cancel.png";
+  RUTA_VALID:string = "./assets/icons/Valid.png";
+  RUTA_CANCEL:string = "./assets/icons/cancel.png";
   id:number = -1;
   em:Empleado = new Empleado();//es una clase
   nombreValido:number = -1;
