@@ -14,8 +14,8 @@
           placeholder="Introduzca Nombre"
           (blur)="comprobarNombre()"
         />
-        <img *ngIf="nombreValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
-        <img *ngIf="nombreValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />
+        <img *ngIf="nombreValido===1" [src] = "RUTA_VALID" alt="Valid icon" />
+        <img *ngIf="nombreValido===2" [src] = "RUTA_CANCEL" alt="Cancel icon" />
       </div>
       <label for="apellido">Apellido</label>
       <div style=" display:flex;align-items: center;">
@@ -29,8 +29,8 @@
           placeholder="Introduzca apellidos"
           (blur)="comprobarApellido()"
         />
-        <img *ngIf="apellidoValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
-        <img *ngIf="apellidoValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />
+        <img *ngIf="nombreValido===1" [src] = "RUTA_VALID" alt="Valid icon" />
+        <img *ngIf="nombreValido===2" [src] = "RUTA_CANCEL" alt="Cancel icon" />
       </div>
       <label for="email">E-mail</label>
       <div style=" display:flex;align-items: center;">
@@ -45,8 +45,8 @@
           pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
           (blur)="comprobarEmail()"
         />
-        <img *ngIf="emailValido===1" src="../../../assets/icons/Valid.png" alt="Valid icon" />
-        <img *ngIf="emailValido===2" src="../../../assets/icons/cancel.png" alt="Cancel icon" />
+        <img *ngIf="nombreValido===1" [src] = "RUTA_VALID" alt="Valid icon" />
+        <img *ngIf="nombreValido===2" [src] = "RUTA_CANCEL" alt="Cancel icon" />
       </div>
     </div>
 
