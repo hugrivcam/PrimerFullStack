@@ -14,7 +14,8 @@ export class ServiceEmpleadoService {
   //private baseUrl:string = "http://localhost:8080/api/v1/empleados";
   //private baseUrl:string = "http://54.204.157.165:8080/api/v1/empleados";
   //private baseUrl:string = "https://54.204.157.165:8443/api/v1/empleados";
-  private baseUrl:string = "https://hugo.grimli.com:8443/api/v1/empleados";
+  //private baseUrl:string = "https://hugo.grimli.com:8443/api/v1/empleados";
+  private baseUrl:string = "https://hugo.grimli.com:100/api/v1/empleados";
   
   constructor(private httpClient: HttpClient) {  }
   //CRUD
