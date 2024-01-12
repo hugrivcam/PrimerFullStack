@@ -4,7 +4,22 @@
     <table class=" table table-striped" style="background-color: rgb(202, 202, 200) ;color: black;">
       <thead class="table-dark">
         <tr>
-          <th>Nombre</th><th>Apellido</th><th>Email</th><th>Acciones</th>
+          <th style = "color:cyan">Nombre
+            <div class="btn-group">
+              <button (click)="ordenarEmpleados('nombre')" class="btn btn-outline-secondary p-0 border-0"><i class="bi bi-sort-down" style="font-size: 1.2rem; color:aquamarine;"></i></button> 
+            </div>
+          </th>
+          <th style = "color:rgb(217, 255, 0)">Apellido
+            <div class="btn-group">
+              <button (click)="ordenarEmpleados('apellido')" class="btn btn-outline-secondary p-0 border-0"><i class="bi bi-sort-down" style="font-size: 1.2rem; color:rgb(217, 255, 0);"></i></button> 
+            </div>
+          </th>
+          <th style = "color:rgb(72, 255, 0)">Email
+            <div class="btn-group">
+              <button (click)="ordenarEmpleados('email')"class="btn btn-outline-secondary p-0 border-0"><i class="bi bi-sort-down" style="font-size: 1.2rem; color:rgb(72, 255, 0);"></i></button> 
+            </div>
+          </th>
+          <th style = "color:white">Acciones</th>
         </tr>
       </thead>
       <tbody>

@@ -15,6 +15,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./lista-empleados.component.css']
 })
 export class ListaEmpleadosComponent implements OnInit,OnDestroy {
+  orden = {
+    Nombre: 'A',
+    Apellido:'A',
+    Email:'A'
+  }
+
   listaEmpleados:InterfaceEmpleados[] =[];
   private miSubscripcionPteLimpiar!:Subscription;
   constructor(private sev:ServiceEmpleadoService,private router:Router ){ }
@@ -30,6 +36,32 @@ export class ListaEmpleadosComponent implements OnInit,OnDestroy {
     catch(error){
       console.log('ocurrio un error al intentar cancelar la subscripcion');
     }
+  }
+
+  public ordenarEmpleados(orderBy:string):void{
+    let v1:number = 1; 
+    let v2:number = -1;
+    //alert(orderBy);
+    switch (orderBy){
+      case 'nombre':
+        console.log(this.orden.Nombre);
+        if (this.orden.Nombre ==='D') {v1=-1;v2=1;this.orden.Nombre='A';}
+        else this.orden.Nombre='D';
+        this.listaEmpleados = this.listaEmpleados.sort((a,b) => a.nombre>b.nombre ? v1 :v2); //es mayo si no menor, 0 seria si son iguales
+        console.log(v1,v2);
+        break;
+      case 'apellido':
+        if (this.orden.Apellido ==='D') {v1=-1;v2=1;this.orden.Apellido='A';}
+        else this.orden.Apellido='D';
+        this.listaEmpleados = this.listaEmpleados.sort((a,b) => a.apellido>b.apellido ? v1 :v2); //es mayo si no menor, 0 seria si son iguales
+        break;
+      case 'email':
+        if (this.orden.Email ==='D') {v1=-1;v2=1;this.orden.Email='A';}
+        else this.orden.Email='D';
+        this.listaEmpleados = this.listaEmpleados.sort((a,b) => a.email>b.email ? v1 :v2); //es mayo si no menor, 0 seria si son iguales
+        break;
+    }
+    console.log(this.listaEmpleados);
   }
 
   public obtenerEmpleados(){
